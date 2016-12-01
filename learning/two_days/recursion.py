@@ -17,8 +17,8 @@ def get_value(my_dict, key):
         try:
             if my_dict[key]:
                 return my_dict[key]
-        except KeyError as k:
-            print("KeyError :", k)
+
+        except KeyError:
             for my_dict_key in my_dict:
                 return get_value(my_dict[my_dict_key], key)
 
@@ -28,8 +28,7 @@ def get_value(my_dict, key):
                 if my_dict_arr[key]:
                     return my_dict_arr[key]
 
-            except KeyError as k:
-                print(k)
+            except KeyError:
                 return get_value(my_dict_arr, key)
 
 
