@@ -14,23 +14,19 @@ def get_value(my_dict, key):
     """
 
     if isinstance(my_dict, dict):
-        try:
-            if my_dict[key]:
-                return my_dict[key]
+        if my_dict.get(key):
+            return my_dict[key]
 
-        except KeyError:
-            for my_dict_key in my_dict:
+
+        for my_dict_key in my_dict:
+            if get_value(my_dict[my_dict_key], key):
                 return get_value(my_dict[my_dict_key], key)
 
     if isinstance(my_dict, list):
         for my_dict_arr in my_dict:
-            try:
-                if my_dict_arr[key]:
-                    return my_dict_arr[key]
-
-            except KeyError:
+            if get_value(my_dict_arr, key):
                 return get_value(my_dict_arr, key)
 
 
 if __name__ == '__main__':
-    print(get_value(DATA, "secretKey"))
+    print(get_value(DATA, "pageCount"))
