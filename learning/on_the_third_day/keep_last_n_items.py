@@ -42,6 +42,18 @@ def deque_demo():
     q.append(3)
     print(q)
 
+def deque_pop():
+    q = deque()
+    [q.append(i) for i in range(4)]
+    print("range(4) :", q)
+    q.appendleft(4)
+    print("appendleft 4 :", q)
+
+    q.pop()
+    print("q.pop() :", q)
+    q.popleft()
+    print("q.popleft() :", q)
+
 # Example use on a file
 if __name__ == '__main__':
     with open('somefile.txt') as f:
@@ -51,4 +63,4 @@ if __name__ == '__main__':
             print(line, end='')
             print('-' * 20)
 
-    deque_demo()
+    deque_pop()
