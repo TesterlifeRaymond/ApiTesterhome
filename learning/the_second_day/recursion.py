@@ -17,7 +17,6 @@ def get_value(my_dict, key):
         if my_dict.get(key):
             return my_dict[key]
 
-
         for my_dict_key in my_dict:
             if get_value(my_dict[my_dict_key], key):
                 return get_value(my_dict[my_dict_key], key)
