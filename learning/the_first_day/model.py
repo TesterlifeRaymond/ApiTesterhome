@@ -51,4 +51,4 @@ class TesterHome:
         return restul_dict(abc_der)
 
 if __name__ == '__main__':
-    TESTER = TesterHome('http://testerhome.com', 'jinjialiu@creditease.cn', '123456')
+    TESTER = TesterHome('http://testerhome.com', 'liujinjia@testerlife.com', '123456')
