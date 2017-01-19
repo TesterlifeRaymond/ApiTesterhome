@@ -53,7 +53,7 @@ def remove_same(items):
 if __name__ == '__main__':
     L = [1, 5, 2, 1, 9, 1, 5, 10]
     # noinspection PyTypeChecker
-    print(list(dedupe_list(L)))
+    print(type(dedupe_list(L)))
 
     D = [{'x': 1, 'y': 2}, {'x': 1, 'y': 3}, {'x': 1, 'y': 2}, {'x': 2, 'y': 4}]
     # noinspection PyTypeChecker

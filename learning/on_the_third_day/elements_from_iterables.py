@@ -38,3 +38,5 @@ def reacord_demo():
     print("name :", name)
     print("email :", email)
     print("phone :", phone)
+
+reacord_demo()

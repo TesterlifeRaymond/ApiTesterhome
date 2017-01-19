@@ -51,7 +51,7 @@ if __name__ == '__main__':
 
     >>> a = Counter(words)
     >>> b = Counter(morewords)
-    >>> a
+
     Counter({'eyes': 8, 'the': 5, 'look': 4, 'into': 3, 'my': 3, 'around': 2,
     "you're": 1, "don't": 1, 'under': 1, 'not': 1})
     >>> b
