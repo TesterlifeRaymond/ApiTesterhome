@@ -5,8 +5,11 @@
 @Project : doraemon
 @File : built_in_function.py
 @Last Modified by:   liujinjia
-@Last Modified time: 2017-01-19 18:33:57
+@Last Modified time: 2017-01-22 13:53:30
 """
+
+import os
+print(os)
 
 
 def test_abs(param):

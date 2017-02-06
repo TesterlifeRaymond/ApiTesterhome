@@ -13,7 +13,6 @@
 
 from operator import attrgetter
 
-
 class User:
     """
         接收一个userid，如果被调用则返回这个userid
