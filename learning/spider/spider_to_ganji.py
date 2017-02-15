@@ -1,13 +1,12 @@
 
 """
 @Author: liujinjia
-@Date:   2017-01-19 15:08:20
-@Project : doraemon
-@File : test_Login.py
+@Date:   2017-02-07 10:17:02
+@Project : LearningPython
+@File : spider_to_ganji.py
 @Last Modified by:   liujinjia
-@Last Modified time: 2017-01-19 17:34:11
+@Last Modified time: 2017-02-15 15:53:11
 """
-
 import requests
 from bs4 import BeautifulSoup
 
@@ -22,4 +21,4 @@ for item in parser:
         source = item.find('dd', {'class': 'dd-item source'}).span.get_text()
     except:
         pass
-    print(title+' | ' + info + ' | ' + source)
+    print(title + ' | ' + info + ' | ' + source)
