@@ -5,11 +5,8 @@
 @Project : doraemon
 @File : built_in_function.py
 @Last Modified by:   liujinjia
-@Last Modified time: 2017-01-22 13:53:30
+@Last Modified time: 2017-02-15 17:21:14
 """
-
-import os
-print(os)
 
 
 def test_abs(param):
@@ -56,8 +53,8 @@ def test_bin(interger):
 
 def main():
     """ run this file """
-    print(test_abs(-1))
-    print(test_all([5, 7, 11, '22', 'abc']))
+    # print(test_abs(-1))
+    print(test_all([]))
     print(test_ascii('abc \nabc'))
     # print(test_bin(TestBin()))
 
