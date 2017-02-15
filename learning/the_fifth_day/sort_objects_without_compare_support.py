@@ -1,4 +1,4 @@
-
+# coding=utf-8
 """
 问题:
         你想排序类型相同的对象，但是他们不支持原生的比较操作。
@@ -11,6 +11,7 @@
 """
 
 from operator import attrgetter
+
 
 class User:
     """接收一个userid，如果被调用则返回这个userid"""

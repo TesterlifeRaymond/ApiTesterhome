@@ -5,9 +5,10 @@
 @Project : doraemon
 @File : read_for_unittest_source.py
 @Last Modified by:   liujinjia
-@Last Modified time: 2017-02-06 14:13:08
+@Last Modified time: 2017-02-07 14:16:28
 """
-import os
+
+
 from posix import _have_functions
 
 
@@ -28,7 +29,8 @@ class Demo:
         print("hi")
         print(name)
 
-    def hello(self):
+    @staticmethod
+    def hello():
         """ no wrapper , hello function """
         print("hello")
 
@@ -37,14 +39,13 @@ def _exists(name):
     """ return name is in globals() result """
     return name in globals()
 
-
 def test_os_functions():
     """ test functions for os add some thing func """
     if _exists("_have_functions"):
         _globals = globals()
 
-        def _add(str, fn):
-            if (fn in _globals) and (str in _have_functions):
+        def _add(param, fn):
+            if (fn in _globals) and (param in _have_functions):
                 _set.add(_globals[fn])
 
         _set = set()
@@ -66,5 +67,25 @@ def test_os_functions():
         _add("HAVE_UTIMENSAT", "utime")
         print(_set)
 
+
+class Staticmethod:
+    """ test statcimethod class """
+
+    def __get__(self, *args, **kwargs):     # real signature unknown
+        """ Return an attribute of instance, which is of type owner. """
+        pass
+
+    def __init__(self, function):   # real signature unknown; restored from __doc__
+        pass
+
+    @staticmethod
+    def __new__(*args, **kwargs):
+        """ class __new__ funcs """
+        pass
+
+    __func__ = property(lambda self: object(), lambda self, v: None, lambda self: None)  # default
+
+
 if __name__ == '__main__':
     test_os_functions()
+    print(Staticmethod.__new__())

@@ -61,5 +61,6 @@ def main():
     print(test_ascii('abc \nabc'))
     # print(test_bin(TestBin()))
 
+
 if __name__ == '__main__':
     main()

@@ -53,15 +53,19 @@ class Calculating:
     @property
     def get_names(self):
         """ return get names """
-        _pro = self._name + 'aaa'
-        return _pro
+        return self._pro
+
+    @get_names.setter
+    def set_name(self, value):
+        """ set value for _pro """
+        self._pro = value
 
 if __name__ == '__main__':
     print(Calculating.min_price())
     print(Calculating.max_price())
     print(Calculating().max_prices())
     print(Calculating.min_prices())
-    cacu = Calculating()
-    cacu.name = 'Lion'
-    print(cacu.name)
-    print(cacu.get_names)
+    Calculating.name = 'Lion'
+    print(Calculating.name)
+    Calculating.set_name = 'lo'
+    print(Calculating.get_names)

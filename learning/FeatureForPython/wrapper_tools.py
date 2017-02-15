@@ -5,9 +5,9 @@
 @Project : LearningPython
 @File : wrapper_tools.py
 @Last Modified by:   liujinjia
-@Last Modified time: 2017-02-08 10:21:45
+@Last Modified time: 2017-02-15 10:00:09
 """
-
+import sys
 from functools import update_wrapper
 
 
@@ -26,10 +26,15 @@ def test(name):
 
 
 class A:
-
+    """pass"""
     @classmethod
-    @wrapper
-    def hi(cls):
-        return cls.__name__
+    def a(cls):
+        """pass"""
+        pass
 
-print(A.hi())
+    @staticmethod
+    def b():
+        """pass"""
+        return A.a.__qualname__.split('.')[0]
+
+print(vars(A.b()))
