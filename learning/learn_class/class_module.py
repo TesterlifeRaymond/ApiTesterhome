@@ -5,7 +5,7 @@
 @Project : LearningPython
 @File : class_module.py
 @Last Modified by:   liujinjia
-@Last Modified time: 2017-02-15 18:33:56
+@Last Modified time: 2017-02-15 19:59:29
 """
 
 
@@ -64,15 +64,20 @@ class NewClass(ClassModule):
 def main():
     """ run script """
     obj = ClassModule('Ray')
-    print(obj.name)     # Ray
-    print(obj)  # class module name is ClassModule
-    print(obj.__dict__())
-    new = NewClass()
-    print(new)  # NewClass
-    print(new.__dict__())
-    print(new.__module__())
-    print(new.print_hello())
-    print(new.print_hello_world())
+    obj = globals()
+    new_obj = globals()
+    print(obj)
+
+    # print(obj.name)     # Ray
+    # print(obj)  # class module name is ClassModule
+    # print(obj.__dict__())
+    # new = NewClass()
+    # print(new)  # NewClass
+    # print(new.__dict__())
+    # print(new.__module__())
+    # print('#'.center(10, "_"), NewClass.__base__)
+    # print(new.print_hello())
+    # print(new.print_hello_world())
 
 
 if __name__ == '__main__':

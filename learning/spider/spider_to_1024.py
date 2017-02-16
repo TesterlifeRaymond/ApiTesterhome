@@ -5,7 +5,7 @@
 @Project : LearningPython
 @File : spider_to_1024.py
 @Last Modified by:   liujinjia
-@Last Modified time: 2017-02-15 15:49:05
+@Last Modified time: 2017-02-15 20:01:01
 """
 
 import requests
@@ -24,8 +24,7 @@ class Spider:
             page = cls.session.get(cls.start_url)
         else:
             page = cls.session.get(url)
-        page.encoding = 'gbk'
-        return page.text
+        page.encoding = 'gbk'return page.text
 
     @classmethod
     def parse_pages(cls):
