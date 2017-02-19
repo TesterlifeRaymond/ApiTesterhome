@@ -7,7 +7,6 @@
 @Last Modified by:   liujinjia
 @Last Modified time: 2017-02-15 10:00:09
 """
-import sys
 from functools import update_wrapper
 
 
@@ -15,12 +14,14 @@ def wrapper(f):
     """ test wrapper def """
     def wrap(*args, **kwargs):
         print("func start !")
-        return f(*args, **kwargs)
+        result = f(*args, **kwargs)
+        print("func ended !")
+        return result
     return update_wrapper(wrap, f)
 
 
 @wrapper
-def test(name):
+def hello(name):
     """ test wrapper """
     print("hello wrapper ! my name is {0}".format(name))
 
@@ -36,5 +37,3 @@ class A:
     def b():
         """pass"""
         return A.a.__qualname__.split('.')[0]
-
-print(vars(A.b()))
