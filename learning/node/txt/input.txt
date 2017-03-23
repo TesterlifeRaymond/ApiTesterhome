@@ -1,0 +1,3 @@
+这是一个xxx文件
+这是测试nodejs操作file而创建的
+尝试用nodejs进行io操作
