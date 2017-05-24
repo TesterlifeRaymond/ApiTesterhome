@@ -25,5 +25,5 @@ class Student(A):
         return "dell"
 
 if __name__ == '__main__':
-    doc = getattr(len, "__doc__")
+    doc = hasattr(Student, "hello")
     print(doc)

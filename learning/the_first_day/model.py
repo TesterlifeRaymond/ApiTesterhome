@@ -1,17 +1,13 @@
-"""
-    这是一个model文件
-"""
+""" 这是一个model文件 """
 
 import requests
 from bs4 import BeautifulSoup
-
-from .util import restul_dict
+from lxml import etree
+# from .util import restul_dict
 
 
 class TesterHome:
-    """
-        这是一个TesterHome Demo Class类
-    """
+    """这是一个TesterHome Demo Class类"""
 
     def __init__(self, url, user, password):
         """
@@ -30,8 +26,8 @@ class TesterHome:
             获取初始化页面信息
         :return:
         """
-        response = self.session.get(self.url).text
-        return response
+        response = self.session.get(self.url)
+        return response.text
 
     def get_user(self):
         """
@@ -43,12 +39,12 @@ class TesterHome:
 
     @staticmethod
     def result_user_dict(my_dict):
-        """
-            返回格式化后的字典信息
-        """
+        """ 返回格式化后的字典信息"""
         import json
         abc_der = json.dumps(my_dict)
-        return restul_dict(abc_der)
+        return abc_der
 
 if __name__ == '__main__':
     TESTER = TesterHome('http://testerhome.com', 'liujinjia@testerlife.com', '123456')
+    source = etree.HTML(TESTER.get_pages())
+    print(source.xpath('//span[@class="name"]/text()'))

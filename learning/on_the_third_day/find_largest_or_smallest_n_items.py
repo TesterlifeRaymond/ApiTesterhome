@@ -54,6 +54,5 @@ def heapq_heappop_demo():
     print(heapq.heappop(nums))
     print(heapq.heappop(nums))
 
-
 if __name__ == '__main__':
     heapq_list_demo()

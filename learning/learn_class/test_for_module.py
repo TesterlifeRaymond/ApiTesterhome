@@ -11,6 +11,7 @@
 import threading
 import time
 import random
+import json
 
 # 继承threading.Thread，并重载run函数。
 

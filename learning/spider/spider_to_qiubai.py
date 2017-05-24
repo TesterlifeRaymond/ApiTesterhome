@@ -20,11 +20,5 @@ def qiu_shi_bai_ke():
     for item in parse:
         print(item.get_text())
 
-
-def ganji():
-    """ get gan ji 's page to parser """
-    url = 'http://fz.ganji.com/fang1/o1/'
-    page = requests.get(url).text
-    parser = BeautifulSoup(page, 'lxml').find_all('div', {"class": "f-list-item"})
-    for item in parser:
-        print(item.img.attrs)
+if __name__ == '__main__':
+    qiu_shi_bai_ke()

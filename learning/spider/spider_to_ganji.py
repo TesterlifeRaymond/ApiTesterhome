@@ -19,6 +19,6 @@ for item in parser:
     info = item.find('span', {'class': 'first js-huxing'}).string
     try:
         source = item.find('dd', {'class': 'dd-item source'}).span.get_text()
-    except:
+    except AttributeError as ex:
         pass
     print(title + ' | ' + info + ' | ' + source)
