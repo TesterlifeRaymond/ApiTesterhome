@@ -14,4 +14,4 @@ KEY = "NAME AGE CLASS NUMBER"
 VALUE = "RAY 30 北京皇城根小学 15"
 USER_INFO = dict(zip(KEY.split(' '), VALUE.split(' ')))
 
-print(USER_INFO.__len__())
+print(USER_INFO)

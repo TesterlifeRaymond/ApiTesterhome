@@ -56,17 +56,17 @@ class NewClass(ClassModule):
         """ new class module func """
         return NewClass.__module__
 
-    def print_hello(self):
-        """ print new class hello func """
-        return "hello {0}".format(NewClass.__name__)
+    # def print_hello(self):
+    #     """ print new class hello func """
+    #     return "hello {0}".format(NewClass.__name__)
 
 
 def main():
     """ run script """
     obj = ClassModule('Ray')
-    obj = globals()
+    print(obj.print_hello_world())
     new_obj = globals()
-    print(obj)
+    print(new_obj)
 
     # print(obj.name)     # Ray
     # print(obj)  # class module name is ClassModule
